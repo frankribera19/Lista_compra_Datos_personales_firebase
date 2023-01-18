@@ -122,6 +122,11 @@ public class MainActivity extends AppCompatActivity {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(this, LoginActivity.class));
             finish();
+        }else{
+            if (item.getItemId() == R.id.btnDatosPersonales){
+                startActivity(new Intent(this, DatosPersonalesActivity.class));
+                finish();
+            }
         }
         return true;
     }
@@ -144,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                 String cantidad = txtCantidad.getText().toString();
                 String precio = txtPrecio.getText().toString();
 
-                if (!nombre.isEmpty() && !cantidad.isEmpty() && !precio.isEmpty()){
+                if (!nombre.isEmpty() || !cantidad.isEmpty() || !precio.isEmpty()){
                     productos.add(new Producto(nombre, Integer.parseInt(cantidad), Float.parseFloat(precio)));
                     //adapter.notifyItemRangeInserted(productos.size()-1);
                     refUser.setValue(productos);

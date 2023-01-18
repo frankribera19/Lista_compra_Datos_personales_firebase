@@ -2,15 +2,15 @@ package com.example.listacomprafirebase.modelos;
 
 public class DatosPersonales {
     private String nombre;
-    private String spellidos;
+    private String apellidos;
     private int num_telefono;
 
     public DatosPersonales() {
     }
 
-    public DatosPersonales(String nombre, String spellidos, int num_telefono) {
+    public DatosPersonales(String nombre, String apellidos, int num_telefono) {
         this.nombre = nombre;
-        this.spellidos = spellidos;
+        this.apellidos = apellidos;
         this.num_telefono = num_telefono;
     }
 
@@ -22,12 +22,12 @@ public class DatosPersonales {
         this.nombre = nombre;
     }
 
-    public String getSpellidos() {
-        return spellidos;
+    public String getapellidos() {
+        return apellidos;
     }
 
-    public void setSpellidos(String spellidos) {
-        this.spellidos = spellidos;
+    public void setapellidos(String spellidos) {
+        this.apellidos = spellidos;
     }
 
     public int getNum_telefono() {
@@ -42,7 +42,7 @@ public class DatosPersonales {
     public String toString() {
         return "DatosPersonales{" +
                 "nombre='" + nombre + '\'' +
-                ", spellidos='" + spellidos + '\'' +
+                ", apellidos='" + apellidos + '\'' +
                 ", num_telefono=" + num_telefono +
                 '}';
     }
